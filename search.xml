@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/uncategorized/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>HomePage</title>
     <url>/homepage/HomePage/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误, 请再试试." data-whm="出现了个故障，这个文章不能被校验, 但是你还是可以看解密后的内容.">
@@ -54,9 +36,8 @@
 <p><a href="https://github.com/notea-org/notea">Notea</a>：Notea是存储在S3上的自托管笔记应用程序，Notea不需要数据库。笔记存储在AWSS3存储桶或兼容的API中。这意味着您可以使用MinIO（自托管）、阿里云OSS（如AWSS3）或NAS来存储您的数据。</p>
 <p>阿里云OSS：阿里云对象存储 OSS（Object Storage Service）是一款海量、安全、低成本、高可靠的云存储服务，支持多种存储类型。（简单理解，高可靠的”网盘“，可别真当网盘用了，成本太高，富哥请忽视）</p>
 <p>S3存储：S3是AmazonWebServices(AWS)提供的一项服务，全名是 Simple Storage Service，简便的存储服务，通过基于RESTfulAPI的接口提供对象存储。</p>
-<p><br>整体设计流程图如下，加上标记的是本次选择的方式。</p>
+<p>整体设计流程图如下，加上标记的是本次选择的方式。</p>
 <p> <img src="https://img-cdz.oss-cn-shanghai.aliyuncs.com/images/20240219-%E5%BB%BA%E8%AE%BE%E6%B5%81%E7%A8%8B%E5%9B%BE.png"></p>
-<p>\</p>
 <hr>
 <h1 id="开始动手"><a href="#开始动手" class="headerlink" title="开始动手"></a>开始动手</h1><h2 id="存储篇"><a href="#存储篇" class="headerlink" title="存储篇"></a>存储篇</h2><p>以阿里云OSS为例，技术步骤分为<strong>开通对象存储→创建与配置bucket→创建子权限账号</strong>。具体费用可以购买阿里云的套餐包，或者按量收费。费用不做介绍，自行查看OSS的<a href="https://help.aliyun.com/zh/oss/product-overview/billing-overview?spm=a2c4g.11186623.0.i5">计费方式</a>与<a href="https://www.aliyun.com/price/product?spm=5176.27921368.package-recommend-tool.7.1dc11450AGe4WO#/oss/detail/oss">定价详情</a>。</p>
 <p>ps：不同于云盘仅按照容量收费，OSS按照存储类型，存储空间、请求次数、流量大小等项计费。</p>
@@ -68,7 +49,7 @@
 <li>登录OSS<a href="https://oss.console.aliyun.com/bucket">控制台</a>。</li>
 <li>创建bucket与基础设置（下图，绿框重点关注，甚至需要记下；红框涉及费用）。</li>
 </ol>
-<p> <img src="https://img-cdz.oss-cn-shanghai.aliyuncs.com/images/20240219-%E5%88%9B%E5%BB%BAbucket%E4%B8%8E%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE.png"></p>
+<p><img src="https://img-cdz.oss-cn-shanghai.aliyuncs.com/images/20240219-%E5%88%9B%E5%BB%BAbucket%E4%B8%8E%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE.png"></p>
 <p>各项的注意事项，本身提示已经写了，需要关注的有：</p>
 <ul>
 <li>Bucekt名称唯一、地域属性（endpoint）不可修改。</li>
@@ -92,7 +73,7 @@
 <p>创建完成后，<strong>千万别关闭创建用户界面</strong>。这里需要复制并<strong>记下AccessKey ID和AccessKey Secret</strong>。一旦关闭后，无法找回，只能删除重新创建一个吧。</p>
 <p> <img src="https://img-cdz.oss-cn-shanghai.aliyuncs.com/images/20240219-%E9%98%BF%E9%87%8C%E4%BA%91%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7.png"></p>
 <p><strong>复制后，内容形式如下：</strong></p>
-<p>用户登录名称 <a href="mailto:&#x63;&#x68;&#100;&#x7a;&#x40;&#x31;&#x32;&#x36;&#x35;&#x32;&#x30;&#x31;&#x32;&#x30;&#x39;&#51;&#52;&#x38;&#54;&#x37;&#53;&#x2e;&#x6f;&#x6e;&#x61;&#x6c;&#x69;&#x79;&#x75;&#110;&#x2e;&#99;&#x6f;&#x6d;">&#x63;&#x68;&#100;&#x7a;&#x40;&#x31;&#x32;&#x36;&#x35;&#x32;&#x30;&#x31;&#x32;&#x30;&#x39;&#51;&#52;&#x38;&#54;&#x37;&#53;&#x2e;&#x6f;&#x6e;&#x61;&#x6c;&#x69;&#x79;&#x75;&#110;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+<p>用户登录名称 <a href="mailto:&#99;&#104;&#100;&#122;&#64;&#49;&#50;&#54;&#53;&#x32;&#48;&#49;&#50;&#x30;&#57;&#x33;&#52;&#x38;&#54;&#55;&#53;&#46;&#x6f;&#110;&#97;&#108;&#105;&#121;&#x75;&#110;&#x2e;&#99;&#x6f;&#x6d;">&#99;&#104;&#100;&#122;&#64;&#49;&#50;&#54;&#53;&#x32;&#48;&#49;&#50;&#x30;&#57;&#x33;&#52;&#x38;&#54;&#55;&#53;&#46;&#x6f;&#110;&#97;&#108;&#105;&#121;&#x75;&#110;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 <p>AccessKey ID LTAxxxxx</p>
 <p>AccessKey Secret h0nExxxx</p>
 <ol start="3">
@@ -138,14 +119,13 @@
 <p>第十行是设定是否走的https，一般选择false；</p>
 <p>第十一行是本容器选择的镜像（第一步拉取notea的main版本）。</p>
 <p>执行完成后，可以查看容器的运行状态。</p>
-<p>\</p>
 </li>
 <li><p>docker与容器的自启。</p>
 <p>这一步或许你在docker的安装环境已经设置过了，那就可以跳过。</p>
 <p>docker开机自启命令“systemctl enable docker”；</p>
 <p>notea容器自启命令“docker update –restart&#x3D;always notea”</p>
 </li>
-<li><p>局域网环境下，使用主机IP:4000就可以访问了，设置中文，版式，导入导出等用法，可自行摸索。</p>
+<li><p>局域网环境下，使用主机IP:4000就可以访问了，设置中文，版式，导入导出等用法，可自行摸索。<br><img src="https://img-cdz.oss-cn-shanghai.aliyuncs.com/images/20240219-notea%E7%95%8C%E9%9D%A21.png"></p>
 </li>
 </ol>
 <h2 id="网络篇"><a href="#网络篇" class="headerlink" title="网络篇"></a>网络篇</h2><p>若基础设施使用的云服务器、ECS等有公网IP，或者IPv6地址的，可直接访问即可。</p>
@@ -158,5 +138,23 @@
       <tags>
         <tag>note-tag</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/uncategorized/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
 </search>
