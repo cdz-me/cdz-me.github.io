@@ -107,6 +107,63 @@
     
     
     <article
+  id="post-主页"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/homepage/%E4%B8%BB%E9%A1%B5/"
+    >主页</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/homepage/%E4%B8%BB%E9%A1%B5/" class="article-date">
+  <time datetime="2024-06-20T07:07:41.000Z" itemprop="datePublished">2024-06-20</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/homepage/">homepage</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  这篇文章被加密了, 需要密码才可以看. 
+      <a class="article-more-link" href="/homepage/%E4%B8%BB%E9%A1%B5/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/homepage-tag/" rel="tag">homepage-tag</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-基于阿里云OSS搭建私人笔记"
   class="article article-type-post"
   itemscope
@@ -139,7 +196,7 @@
     <div class="article-entry" itemprop="articleBody">
        
   <h1 id="整体规划"><a href="#整体规划" class="headerlink" title="整体规划"></a>整体规划</h1><p>目前，市场上各类笔记产品都挺多的，有道云笔记、印象笔记、简书、notion都是比较成熟、且已经市场化的产品，作为一个普通的用户使用这些学习成本更低，大厂的备份应该更安全（理论如此）。本地的MD编辑器有VScode、Typora、marktext等工具。<strong>因此，这就是个自己瞎折腾的记录与总结~</strong></p>
-<p>成品分享地址：<a target="_blank" rel="noopener" href="http://43.248.137.35:58085/BBkRJRB-Gr">跳转</a>。由于是走内网穿透，链接可能会挂，内容一致。</p>
+<p>成品分享地址：<a target="_blank" rel="noopener" href="http://note.chendz.fun/BBkRJRB-Gr">跳转</a>。由于是走内网穿透，链接可能会挂，内容一致。</p>
 <h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ol>
 <li>易用性上，B&#x2F;S架构，公网随时可以开写，当作随手记。支持分享。</li>
 <li>构建上，服务端轻量化，搭建简单。</li>
@@ -186,7 +243,7 @@
 <p>创建完成后，<strong>千万别关闭创建用户界面</strong>。这里需要复制并<strong>记下AccessKey ID和AccessKey Secret</strong>。一旦关闭后，无法找回，只能删除重新创建一个吧。</p>
 <p> <img src="https://img-cdz.oss-cn-shanghai.aliyuncs.com/images/20240219-%E9%98%BF%E9%87%8C%E4%BA%91%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7.png"></p>
 <p><strong>复制后，内容形式如下：</strong></p>
-<p>用户登录名称 <a href="mailto:&#99;&#x68;&#x64;&#122;&#x40;&#x31;&#50;&#x36;&#x35;&#50;&#48;&#49;&#50;&#48;&#57;&#x33;&#x34;&#x38;&#x36;&#x37;&#53;&#46;&#111;&#110;&#97;&#108;&#105;&#x79;&#117;&#110;&#46;&#x63;&#111;&#x6d;">&#99;&#x68;&#x64;&#122;&#x40;&#x31;&#50;&#x36;&#x35;&#50;&#48;&#49;&#50;&#48;&#57;&#x33;&#x34;&#x38;&#x36;&#x37;&#53;&#46;&#111;&#110;&#97;&#108;&#105;&#x79;&#117;&#110;&#46;&#x63;&#111;&#x6d;</a></p>
+<p>用户登录名称 <a href="mailto:&#99;&#x68;&#100;&#x7a;&#x40;&#x31;&#x32;&#x36;&#x35;&#50;&#x30;&#49;&#x32;&#x30;&#x39;&#51;&#52;&#x38;&#54;&#x37;&#53;&#x2e;&#x6f;&#x6e;&#x61;&#x6c;&#105;&#121;&#117;&#110;&#x2e;&#99;&#x6f;&#x6d;">&#99;&#x68;&#100;&#x7a;&#x40;&#x31;&#x32;&#x36;&#x35;&#50;&#x30;&#49;&#x32;&#x30;&#x39;&#51;&#52;&#x38;&#54;&#x37;&#53;&#x2e;&#x6f;&#x6e;&#x61;&#x6c;&#105;&#121;&#117;&#110;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 <p>AccessKey ID LTAxxxxx</p>
 <p>AccessKey Secret h0nExxxx</p>
 <ol start="3">
@@ -238,7 +295,7 @@
 <p>docker开机自启命令“systemctl enable docker”；</p>
 <p>notea容器自启命令“docker update –restart&#x3D;always notea”</p>
 </li>
-<li><p>局域网环境下，使用主机IP:4000就可以访问了，设置中文，版式，导入导出等用法，可自行摸索。<br><img src="https://img-cdz.oss-cn-shanghai.aliyuncs.com/images/20240219-notea%E7%95%8C%E9%9D%A21.png"></p>
+<li><p>局域网环境下，使用主机IP:4000就可以访问了，设置中文，版式，导入导出等用法，可自行摸索。<br><img src="https://img-cdz.oss-cn-shanghai.aliyuncs.com/images/20240219-notea%E7%95%8C%E9%9D%A21.png#pic_center"></p>
 </li>
 </ol>
 <h2 id="网络篇"><a href="#网络篇" class="headerlink" title="网络篇"></a>网络篇</h2><p>若基础设施使用的云服务器、ECS等有公网IP，或者IPv6地址的，可直接访问即可。</p>
@@ -255,63 +312,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/note-tag/" rel="tag">note-tag</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-HomePage"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/homepage/HomePage/"
-    >HomePage</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/homepage/HomePage/" class="article-date">
-  <time datetime="2023-11-04T02:27:26.000Z" itemprop="datePublished">2023-11-04</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/homepage/">homepage</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  这篇文章被加密了, 需要密码才可以看. 
-      <a class="article-more-link" href="/homepage/HomePage/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/homepage-tag/" rel="tag">homepage-tag</a></li></ul>
 
     </footer>
   </div>
